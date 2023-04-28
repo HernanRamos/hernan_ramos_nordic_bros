@@ -1,0 +1,11 @@
+
+/*FORMULARIO*/
+form{
+    padding:5% 3% 15% 3%;
+    margin: auto;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    input{margin:2%;
+        &:placeholder {text-align: start;}}}

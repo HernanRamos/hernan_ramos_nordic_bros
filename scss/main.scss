@@ -1,0 +1,147 @@
+/*---VARIABLES---*/
+
+$color_principal:#8cb4bf;
+$color_secundario:#c8c8c8;
+
+/*---IMPORT SCSS---*/
+
+@import './index';
+@import './productos';
+@import './quienes_somos';
+@import './contacto';
+@import './mayoristas';
+
+/*---RESET & FONTS & VARIABLES---*/
+
+*{margin: 0%;padding: 0%;}
+@font-face{ font-family: "ArialBlack";src: url(../fonts/arial/ariblk.ttf)}
+@font-face{ font-family: "Agency";src: url(../fonts/agency/AGENCYB.TTF)}
+@font-face{ font-family: "SansB";src: url(../fonts/sans/LEMONMILK-Bold.otf)}
+@font-face{ font-family: "SansL";src: url(../fonts/sans/LEMONMILK-Light.otf)}
+@font-face{ font-family: "Sans";src: url(../fonts/sans/LEMONMILK-Medium.otf)}
+
+/*---HEADER---*/
+
+header{
+    width: 100%;
+    min-height: 10vh;
+    background-color:$color_principal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    /*LOGO*/
+    img{width: 180px;}
+    /*SECCIONES*/
+    nav{
+        ul{
+            margin:0%;
+            background-color: $color_principal;
+            padding: 0%;
+            margin-bottom:0.2%;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            li{
+            width: 150px;
+            text-align: center;
+            font-family: "ArialBlack";
+            font-size: 14.5px;
+                a {text-decoration: none;color: white;
+                    &:hover {color: black;transition: 0.3s;}}}}}         
+    .offcanvas-title{
+        width: 150px;
+        color: black;
+        font-size: 25px;}
+    .navbar {padding:0%;background-color: $color_principal;}
+    .navbar-nav {padding: 0%;align-items: stretch;}
+    .container-fluid {padding:0%;background-color: $color_principal;}
+    .navbar-toggler-icon {background-image:url('../img/MA.png');width: 40px;}
+    /*LINK PRODUCTOS*/
+    .nav-link{
+        padding: 0%;
+        margin:0%;
+        color: white;
+        width: 150px;
+        font-family: "ArialBlack";
+        font-size: 14.5px;}
+    /*ANIMACION LINK PRODUCTOS*/    
+    .nav-item:hover{color:black;}
+    /*CONTENIDO LINK BIDONES HIDRATACION*/
+    .custom-dropdown-item{
+        padding: 0%;
+        background-color: $color_principal;
+        color: white;
+        width: 200px;} 
+    /*CAJA LINK BIDONES HIDRATACION*/
+    .dropdown-menu.show{
+        padding: 5%;
+        margin-top: 4%;
+        border: none;
+        background-color: $color_principal;
+        width: 215px;}
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus{background-color: $color_principal;color:black;}
+    .button1{border: none;color: $color_principal;}
+    .btn-close{--bs-btn-close-focus-shadow:none;--bs-btn-close-opacity: none;}}
+
+/*---MAIN---*/
+
+h1 {
+    padding-top: 3%;
+    text-align: center;
+    font-family:"SansB";
+    font-size: 25px;
+    color:black;}
+
+/*---FOOTER---*/
+
+footer {
+    width: 100%;
+    min-height: 20vh;
+    padding: 2%;
+    background-color: $color_principal;
+    font-family:"ArialBlack";
+    font-size: 16px;
+    color: white;
+    ul{
+        list-style: none;
+        li{ 
+            a {text-decoration: none; color: white;
+                &:hover {color: black;transition: 0.3s;}}}}
+    .footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;}}    
+    
+ /*---MEDIAS QUERYS---*/
+
+@media (max-width:768px){
+/*HEADER*/
+    .header{
+    display: flex;
+    align-items: center;}
+    .center{text-align:start;width: 100%;}
+    .offcanvas{background-color: $color_principal;}
+    .nav_ul_offcanvas{
+    padding-top: 5%;
+    margin: 0%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-start;}
+/*MAIN*/
+    .main_768{padding: 5% 3% 5% 3%;}       
+/*FOOTER*/
+    .footer{padding:0%}}
+@media (max-width:426px){
+/*MAIN*/
+    .main_425{ padding:5% 4% 5% 4%;}
+    .h1_425{font-size: 23px;padding-top: 5%;}}
+        

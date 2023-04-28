@@ -1,0 +1,41 @@
+
+/*TABLA*/
+.h3_mayoristas{
+    padding: 2%;
+    text-align: left;
+    font-family:"Sans";
+    font-size: 25px;
+    color: black;}
+.grid_container_mayoristas{
+    padding:3% 3% 15% 3%;
+    width: 100%;
+    background-color: white;
+    font-family:"Sans";
+    font-size: 16px;
+    color: black;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    div{
+    padding: 1%;
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    text-align: center;}}
+.h4_mayoristas{
+    font-family:"SansB";
+    font-size: 18px;
+    color: black;}
+
+/*MEDIAS QUERYS*/
+@media (max-width:768px){
+    .h3_mayoristas{
+    padding:5% 2% 2% 3%;
+    font-size: 23px;}}
+@media (max-width:426px){
+    .h3_mayoristas{
+    padding:5% 2% 2% 3%;
+    font-size: 21px;}
+    .grid_container_mayoristas{
+    padding:5% 4% 15% 4%;
+    font-size: 15px;}}

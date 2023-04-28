@@ -1,0 +1,18 @@
+
+/*PARRAFOS*/
+.parrafo_qs1{
+    padding:5% 3% 5% 3%;
+    height: 280px;
+    font-family:"Sans";
+    font-size: 16px;
+    color: black;}
+.parrafo_qs2{
+    padding:3%;
+    height: 300px;
+    font-family:"Agency";
+    font-size: 30px;
+    font-style: italic;
+    color: black;}
+
+/*MEDIAS QUERYS*/
+@media (max-width:426px){.parrafo_qs1{ height: 380px;}}
