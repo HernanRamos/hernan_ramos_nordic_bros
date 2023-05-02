@@ -1,87 +1,113 @@
 
+.h1_index{display: none;}
+
 /*GRID*/
 .grid_area_index{
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.2fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.2fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr;
     grid-template-areas:
    "tres_bidones tres_bidones tres_bidones tres_bidones"
-   "h3_index h3_index h3_index h3_index"
-   "img_index img_index parrafo_index1 parrafo_index1"
-   "img_index img_index parrafo_index2 parrafo_index2";
+
+   "h3_index_a h3_index_a h3_index_a h3_index_a"
+   "img_index_a img_index_a parrafo_index_a1 parrafo_index_a1"
+   "img_index_a img_index_a parrafo_index_a2 parrafo_index_a2"
+
+   "h3_index_b h3_index_b h3_index_b h3_index_b"
+   "img_index_b img_index_b parrafo_index_b1 parrafo_index_b1"
+   "img_index_b img_index_b parrafo_index_b2 parrafo_index_b2";
     background-color: white;}
 .tres_bidones{grid-area:tres_bidones;}
-.h3_index{grid-area:h3_index;}
-.img_index{grid-area:img_index;}
-.parrafo_index1{grid-area:parrafo_index1;}
-.parrafo_index2{grid-area:parrafo_index2;}
+.h3_index_a{grid-area:h3_index_a;}
+.img_index_a{grid-area:img_index_a;}
+.parrafo_index_a1{grid-area:parrafo_index_a1;}
+.parrafo_index_a2{grid-area:parrafo_index_a2;}
+.h3_index_b{grid-area:h3_index_b;}
+.img_index_b{grid-area:img_index_b;}
+.parrafo_index_b1{grid-area:parrafo_index_b1;}
+.parrafo_index_b2{grid-area:parrafo_index_b2;}
+
 
 /*PORTADA*/
 main{
-    img {width: 100%;}}
+    .img_p {width: 100%;}}
+    
 
-/*PROMO "BROS"*/
-.h3_index{
-    padding: 3%;
-    text-align: center;
-    font-family:"SansB";
-    font-size: 35px;
-    color: black;}
-.img_index{width: 400px;border-radius:15px;}
-.parrafo_index1{
-    padding: 2%;
-    margin: 5% 20% 0% 0%;
-    width: 80%;
-    height: 55%;
-    background:linear-gradient(to right, $color_secundario 15%, white 100%);
-    font-family:"Sans";
-    font-size: 16px;
-    color: black;border-radius:15px;}
-.parrafo_index2{
-    padding: 2%;
-    margin-right: 20%;
-    width: 80%;
-    height: 32%;
-    background:linear-gradient(to left, $color_secundario 15%, white 100% );
-    text-align: center;
-    font-family:"Sans";
-    font-size: 30px;
-    font-style: italic;
-    color: black;border-radius:15px;}
+/*PROMO BROS*/
+
+.h3_index_a{@extend .container1;}
+.h3_index_b{@extend .container1;i{font-size: 26px;}}
+.img_index_a{width: 400px;border-radius:15px;}
+.img_index_b{width: 400px;border-radius:15px;}
+
+.parrafo_index_a1{@extend .container2;}
+.parrafo_index_b1{@extend .container2;}
+.parrafo_index_a2{@extend .container3;}
+.parrafo_index_b2{@extend .container3;}
+
 
 /*MEDIAS QUERYS*/
 @media (max-width:768px){
     .grid_area_index{margin-bottom: 8%;}
-    .img_index{width: 280px;}
-    .parrafo_index1{
+    .h3_index_a{font-size: 30px}
+    .h3_index_b{font-size: 30px}
+    .img_index_a{width: 280px;}
+    .img_index_b{width: 280px;}
+    .parrafo_index_a1{
     margin: 5% 10% 0% 0%;
     width: 100%;
-    height: 90%;}
-    .parrafo_index2{
+    height: 90%;
+    font-size: 14px}
+    .parrafo_index_b1{
+        margin: 5% 10% 0% 0%;
+        width: 100%;
+        height: 90%;
+        font-size: 14px}
+    .parrafo_index_a2{
     margin:10% 10% 0% 0%;
     height: 40%;
-    font-size: 26px;}}
+    font-size: 26px;}
+    .parrafo_index_b2{
+        margin:10% 10% 0% 0%;
+        height: 40%;
+        font-size: 26px;}}
 @media (max-width:426px){
     .grid_area_index{
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.2fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.2fr 0.5fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr;
     grid-template-areas:
-   "tres_bidones tres_bidones tres_bidones tres_bidones"
-   "h3_index h3_index h3_index h3_index"
-   "img_index img_index img_index img_index"
-   "parrafo_index1 parrafo_index1 parrafo_index1 parrafo_index1"
-   "parrafo_index2 parrafo_index2 parrafo_index2 parrafo_index2";}
-    .h3_index{font-size: 30px;}
-    .img_index{width: 240px;}
-    .parrafo_index1{
+   "h3_index_a h3_index_a h3_index_a h3_index_a"
+   "img_index_a img_index_a img_index_a img_index_a"
+   "parrafo_index_a1 parrafo_index_a1 parrafo_index_a1 parrafo_index_a1"
+   "parrafo_index_a2 parrafo_index_a2 parrafo_index_a2 parrafo_index_a2"
+   
+   "h3_index_b h3_index_b h3_index_b h3_index_b"
+   "img_index_b img_index_b img_index_b img_index_b"
+   "parrafo_index_b1 parrafo_index_b1 parrafo_index_b1 parrafo_index_b1"
+   "parrafo_index_b2 parrafo_index_b2 parrafo_index_b2 parrafo_index_b2";}
+    .h3_index_a{width: 350px;}
+    .img_index_a{width: 240px;}
+    .parrafo_index_a1{
     margin: 6% 0% 0% 0%;
     width: 78%;
     height: 84%;
     font-size: 14px;}
-    .parrafo_index2{
+    .parrafo_index_a2{
     margin:6% 0% 0% 0%;
-    height: 60%;
-    font-size: 24px;}}
+    height: 45%;
+    font-size: 24px;}
+    .h3_index_b{width: 350px;}
+    .img_index_b{width: 240px;}
+    .parrafo_index_b1{
+    margin: 6% 0% 0% 0%;
+    width: 78%;
+    height: 84%;
+    font-size: 14px;}
+    .parrafo_index_b2{
+    margin:6% 0% 0% 0%;
+    height: 45%;
+    font-size: 24px;}
+    .tres_bidones{display:none;}}
