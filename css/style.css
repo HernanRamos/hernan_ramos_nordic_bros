@@ -195,7 +195,7 @@ footer {
       flex-wrap: nowrap; } }
 
 /*CONTAINERS*/
-.container1, .h3_index_a, .h3_index_b {
+.container_h3_index, .h3_index_a, .h3_index_b {
   width: 480px;
   display: flex;
   align-items: center;
@@ -205,11 +205,11 @@ footer {
   font-family: "SansB";
   font-size: 35px;
   color: black; }
-  .container1 i, .h3_index_a i, .h3_index_b i {
+  .container_h3_index i, .h3_index_a i, .h3_index_b i {
     font-size: 22px;
     margin: 0% 3% 0% 3%; }
 
-.container2, .parrafo_index_a1, .parrafo_index_b1 {
+.container_parrafo_index1, .parrafo_index_a1, .parrafo_index_b1 {
   padding: 2%;
   margin: 5% 20% 0% 0%;
   width: 80%;
@@ -220,7 +220,7 @@ footer {
   color: black;
   border-radius: 15px; }
 
-.container3, .parrafo_index_a2, .parrafo_index_b2 {
+.container_parrafo_index2, .parrafo_index_a2, .parrafo_index_b2 {
   padding: 2%;
   margin-right: 20%;
   width: 80%;
@@ -239,14 +239,15 @@ footer {
 /*GRID*/
 .grid_area_index {
   display: grid;
+  align-items: center;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 0.2fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr;
-  grid-template-areas: "tres_bidones tres_bidones tres_bidones tres_bidones"  "h3_index_a h3_index_a h3_index_a h3_index_a" "img_index_a img_index_a parrafo_index_a1 parrafo_index_a1" "img_index_a img_index_a parrafo_index_a2 parrafo_index_a2"  "h3_index_b h3_index_b h3_index_b h3_index_b" "img_index_b img_index_b parrafo_index_b1 parrafo_index_b1" "img_index_b img_index_b parrafo_index_b2 parrafo_index_b2";
+  grid-template-areas: "slide_portada slide_portada slide_portada slide_portada" "h3_index_a h3_index_a h3_index_a h3_index_a" "img_index_a img_index_a parrafo_index_a1 parrafo_index_a1" "img_index_a img_index_a parrafo_index_a2 parrafo_index_a2" "h3_index_b h3_index_b h3_index_b h3_index_b" "img_index_b img_index_b parrafo_index_b1 parrafo_index_b1" "img_index_b img_index_b parrafo_index_b2 parrafo_index_b2";
   background-color: white; }
 
-.tres_bidones {
-  grid-area: tres_bidones; }
+.slide_portada {
+  grid-area: slide_portada; }
 
 .h3_index_a {
   grid-area: h3_index_a; }
@@ -272,18 +273,19 @@ footer {
 .parrafo_index_b2 {
   grid-area: parrafo_index_b2; }
 
-/*PORTADA*/
-main .img_p {
-  width: 100%; }
+/*SLIDE PORTADA*/
+.carousel-control-prev-icon {
+  background-image: url(../img/Flecha_Prev.png); }
+
+.carousel-control-next-icon {
+  background-image: url(../img/Flecha_Next.png); }
 
 /*PROMO BROS*/
-.h3_index_b i {
-  font-size: 26px; }
-
 .img_index_a {
   width: 400px;
   border-radius: 15px; }
 
+/*PROMO KING*/
 .img_index_b {
   width: 400px;
   border-radius: 15px; }
@@ -325,7 +327,7 @@ main .img_p {
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.2fr 0.5fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr;
-    grid-template-areas: "h3_index_a h3_index_a h3_index_a h3_index_a" "img_index_a img_index_a img_index_a img_index_a" "parrafo_index_a1 parrafo_index_a1 parrafo_index_a1 parrafo_index_a1" "parrafo_index_a2 parrafo_index_a2 parrafo_index_a2 parrafo_index_a2"  "h3_index_b h3_index_b h3_index_b h3_index_b" "img_index_b img_index_b img_index_b img_index_b" "parrafo_index_b1 parrafo_index_b1 parrafo_index_b1 parrafo_index_b1" "parrafo_index_b2 parrafo_index_b2 parrafo_index_b2 parrafo_index_b2"; }
+    grid-template-areas: "h3_index_a h3_index_a h3_index_a h3_index_a" "img_index_a img_index_a img_index_a img_index_a" "parrafo_index_a1 parrafo_index_a1 parrafo_index_a1 parrafo_index_a1" "parrafo_index_a2 parrafo_index_a2 parrafo_index_a2 parrafo_index_a2" "h3_index_b h3_index_b h3_index_b h3_index_b" "img_index_b img_index_b img_index_b img_index_b" "parrafo_index_b1 parrafo_index_b1 parrafo_index_b1 parrafo_index_b1" "parrafo_index_b2 parrafo_index_b2 parrafo_index_b2 parrafo_index_b2"; }
   .h3_index_a {
     width: 350px; }
   .img_index_a {
@@ -352,7 +354,7 @@ main .img_p {
     margin: 6% 0% 0% 0%;
     height: 45%;
     font-size: 24px; }
-  .tres_bidones {
+  .slide_portada {
     display: none; } }
 
 /*BIDONES*/
@@ -408,52 +410,118 @@ main .img_p {
   .bidon_beige {
     margin-right: 0%; } }
 
+/*MAIN*/
+.h1_qs {
+  color: white; }
+
+.main_qs {
+  background-image: url("../img/Fondo_Hacha.jpg");
+  background-size: contain; }
+
 /*PARRAFOS*/
 .parrafo_qs1 {
   padding: 5% 3% 5% 3%;
   height: 280px;
   font-family: "Sans";
   font-size: 16px;
-  color: black; }
+  color: white; }
 
 .parrafo_qs2 {
   padding: 3%;
-  height: 300px;
+  margin: 0%;
+  height: 366px;
   font-family: "Agency";
   font-size: 30px;
   font-style: italic;
-  color: black; }
-
-/*MEDIAS QUERYS*/
-@media (max-width: 426px) {
-  .parrafo_qs1 {
-    height: 380px; } }
-
-/*FORMULARIO*/
-form {
-  padding: 5% 3% 15% 3%;
-  margin: auto;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch; }
-  form input {
-    margin: 2%; }
-    form input:placeholder {
-      text-align: start; }
+  color: white; }
 
 /*MEDIAS QUERYS*/
 @media (max-width: 768px) {
-  form {
-    width: 500px; }
-    form input {
-      font-size: 14px; } }
+  .parrafo_qs1 {
+    height: 210px; }
+  .parrafo_qs2 {
+    height: 86px; } }
 
 @media (max-width: 426px) {
-  form {
-    width: 300px; }
-    form input {
-      font-size: 12px; } }
+  .main_qs {
+    background-size: cover; }
+  .parrafo_qs1 {
+    height: 300px; } }
+
+.h1_contacto {
+  display: none; }
+
+/*FORMULARIO*/
+.form {
+  margin: auto;
+  margin-top: 8%;
+  margin-bottom: 20%;
+  padding: 20px;
+  width: 800px;
+  height: 570px;
+  background-color: #8cb4bf;
+  border-radius: 15px;
+  box-sizing: border-box; }
+  .form .title {
+    color: white;
+    font-family: "SansB";
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 8px; }
+  .form .subtitle {
+    color: white;
+    font-family: "SansB";
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px; }
+  .form .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%; }
+  .form .ic1 {
+    margin-top: 40px; }
+  .form .ic2 {
+    margin-top: 30px; }
+  .form .input {
+    background-color: #c8c8c8;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%; }
+  .form .submit {
+    background-color: #c8c8c8;
+    font-family: "SansB";
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%; }
+  .form .submit:active {
+    background-color: #8a8a8a; }
+
+/*MEDIAS QUERYS*/
+@media (max-width: 768px) {
+  .form {
+    width: 500px; } }
+
+@media (max-width: 426px) {
+  .form {
+    width: 350px; }
+    .form .input {
+      font-size: 16px; } }
 
 /*TABLA*/
 .h3_mayoristas {

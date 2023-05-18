@@ -4,21 +4,20 @@
 /*GRID*/
 .grid_area_index{
     display: grid;
+    align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.2fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr;
     grid-template-areas:
-   "tres_bidones tres_bidones tres_bidones tres_bidones"
-
+   "slide_portada slide_portada slide_portada slide_portada"
    "h3_index_a h3_index_a h3_index_a h3_index_a"
    "img_index_a img_index_a parrafo_index_a1 parrafo_index_a1"
    "img_index_a img_index_a parrafo_index_a2 parrafo_index_a2"
-
    "h3_index_b h3_index_b h3_index_b h3_index_b"
    "img_index_b img_index_b parrafo_index_b1 parrafo_index_b1"
    "img_index_b img_index_b parrafo_index_b2 parrafo_index_b2";
     background-color: white;}
-.tres_bidones{grid-area:tres_bidones;}
+.slide_portada{grid-area:slide_portada;}
 .h3_index_a{grid-area:h3_index_a;}
 .img_index_a{grid-area:img_index_a;}
 .parrafo_index_a1{grid-area:parrafo_index_a1;}
@@ -29,22 +28,20 @@
 .parrafo_index_b2{grid-area:parrafo_index_b2;}
 
 
-/*PORTADA*/
-main{
-    .img_p {width: 100%;}}
-    
+/*SLIDE PORTADA*/
+.carousel-control-prev-icon{background-image: url(../img/Flecha_Prev.png);}
+.carousel-control-next-icon{background-image: url(../img/Flecha_Next.png);}
 
 /*PROMO BROS*/
-
-.h3_index_a{@extend .container1;}
-.h3_index_b{@extend .container1;i{font-size: 26px;}}
+.h3_index_a{@extend .container_h3_index;}
 .img_index_a{width: 400px;border-radius:15px;}
+.parrafo_index_a1{@extend .container_parrafo_index1;}
+.parrafo_index_a2{@extend .container_parrafo_index2;}
+/*PROMO KING*/
+.h3_index_b{@extend .container_h3_index;}
 .img_index_b{width: 400px;border-radius:15px;}
-
-.parrafo_index_a1{@extend .container2;}
-.parrafo_index_b1{@extend .container2;}
-.parrafo_index_a2{@extend .container3;}
-.parrafo_index_b2{@extend .container3;}
+.parrafo_index_b1{@extend .container_parrafo_index1;}
+.parrafo_index_b2{@extend .container_parrafo_index2;}
 
 
 /*MEDIAS QUERYS*/
@@ -83,7 +80,6 @@ main{
    "img_index_a img_index_a img_index_a img_index_a"
    "parrafo_index_a1 parrafo_index_a1 parrafo_index_a1 parrafo_index_a1"
    "parrafo_index_a2 parrafo_index_a2 parrafo_index_a2 parrafo_index_a2"
-   
    "h3_index_b h3_index_b h3_index_b h3_index_b"
    "img_index_b img_index_b img_index_b img_index_b"
    "parrafo_index_b1 parrafo_index_b1 parrafo_index_b1 parrafo_index_b1"
@@ -110,4 +106,4 @@ main{
     margin:6% 0% 0% 0%;
     height: 45%;
     font-size: 24px;}
-    .tres_bidones{display:none;}}
+    .slide_portada{display:none;}}

@@ -1,17 +1,28 @@
+/*MAIN*/
+.h1_qs{color:white}
+.main_qs{background-image: url("../img/Fondo_Hacha.jpg");background-size:contain;}
+
 /*PARRAFOS*/
 .parrafo_qs1{
     padding:5% 3% 5% 3%;
     height: 280px;
     font-family:"Sans";
     font-size: 16px;
-    color: black;}
+    color: white;
+    }
 .parrafo_qs2{
     padding:3%;
-    height: 300px;
+    margin:0%;
+    height: 366px;
     font-family:"Agency";
     font-size: 30px;
     font-style: italic;
-    color: black;}
+    color: white;}
 
 /*MEDIAS QUERYS*/
-@media (max-width:426px){.parrafo_qs1{ height: 380px;}}
+@media (max-width:768px){
+    .parrafo_qs1{ height: 210px;}
+    .parrafo_qs2{ height: 86px;}}
+@media (max-width:426px){
+    .main_qs{background-size:cover;}
+    .parrafo_qs1{ height: 300px;}}
