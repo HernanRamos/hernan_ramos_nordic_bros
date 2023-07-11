@@ -16,7 +16,8 @@
    "h3_index_b h3_index_b h3_index_b h3_index_b"
    "img_index_b img_index_b parrafo_index_b1 parrafo_index_b1"
    "img_index_b img_index_b parrafo_index_b2 parrafo_index_b2";
-    background-color: white;}
+    background-color: white;
+    margin-bottom:60px;}
 .slide_portada{grid-area:slide_portada;}
 .h3_index_a{grid-area:h3_index_a;}
 .img_index_a{grid-area:img_index_a;}
@@ -34,12 +35,14 @@
 
 /*PROMO BROS*/
 .h3_index_a{@extend .container_h3_index;}
-.img_index_a{width: 400px;border-radius:15px;}
+.img_index_a{width: 380px;border-radius:15px;transition: 0.3s;}
+.img_index_a:hover{width: 430px;}
 .parrafo_index_a1{@extend .container_parrafo_index1;}
 .parrafo_index_a2{@extend .container_parrafo_index2;}
 /*PROMO KING*/
 .h3_index_b{@extend .container_h3_index;}
-.img_index_b{width: 400px;border-radius:15px;}
+.img_index_b{width:380px;border-radius:15px;transition: 0.3s;}
+.img_index_b:hover{width: 430px;}
 .parrafo_index_b1{@extend .container_parrafo_index1;}
 .parrafo_index_b2{@extend .container_parrafo_index2;}
 

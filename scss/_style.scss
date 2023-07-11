@@ -67,16 +67,19 @@ header{
     /*CONTENIDO LINK BIDONES HIDRATACION*/
     .custom-dropdown-item{
         padding: 0%;
+        padding-bottom: 2px;
+        text-align: start;
+        font-size:14px ;
         background-color: $color_principal;
         color: white;
-        width: 200px;} 
+        width: 180px;} 
     /*CAJA LINK BIDONES HIDRATACION*/
     .dropdown-menu.show{
         padding: 5%;
         margin-top: 4%;
         border: none;
         background-color: $color_principal;
-        width: 215px;}
+        width: 200px;}
     .dropdown-menu li a:hover,
     .dropdown-menu li a:focus{background-color: $color_principal;color:black;}
     .button1{border: none;color: $color_principal;}
@@ -110,9 +113,9 @@ footer {
             align-items: center;
             flex-direction: row;
             justify-content: center;
-            i{font-size: 25px;margin-right: 5%;}
+            i{font-size: 25px;margin-right: 5%; color:white;}
             a {text-decoration: none; color: white;
-                &:active {color: $color_secundario;}}}}
+            &:active {color:$color_secundario;}}}}
     .footer{
         padding: 0%;
         display: flex;

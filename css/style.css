@@ -90,15 +90,18 @@ header {
     color: black; }
   header .custom-dropdown-item {
     padding: 0%;
+    padding-bottom: 2px;
+    text-align: start;
+    font-size: 14px;
     background-color: #8cb4bf;
     color: white;
-    width: 200px; }
+    width: 180px; }
   header .dropdown-menu.show {
     padding: 5%;
     margin-top: 4%;
     border: none;
     background-color: #8cb4bf;
-    width: 215px; }
+    width: 200px; }
   header .dropdown-menu li a:hover,
   header .dropdown-menu li a:focus {
     background-color: #8cb4bf;
@@ -138,7 +141,8 @@ footer {
       justify-content: center; }
       footer ul li i {
         font-size: 25px;
-        margin-right: 5%; }
+        margin-right: 5%;
+        color: white; }
       footer ul li a {
         text-decoration: none;
         color: white; }
@@ -194,7 +198,7 @@ footer {
       display: flex;
       flex-wrap: nowrap; } }
 
-/*CONTAINERS*/
+/*---INDEX---*/
 .container_h3_index, .h3_index_a, .h3_index_b {
   width: 480px;
   display: flex;
@@ -206,6 +210,7 @@ footer {
   font-size: 35px;
   color: black; }
   .container_h3_index i, .h3_index_a i, .h3_index_b i {
+    color: black;
     font-size: 22px;
     margin: 0% 3% 0% 3%; }
 
@@ -233,6 +238,32 @@ footer {
   color: black;
   border-radius: 15px; }
 
+/*---PRODUCTOS---*/
+.container_grid_productos, .bidones, .barras {
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.container_h3_productos, .h3_productos {
+  text-align: start;
+  font-family: "SansB";
+  font-size: 20px;
+  color: black; }
+
+.container_h4_productos, .h4_productos {
+  padding: 1% 0% 2.5% 0%;
+  text-align: start;
+  font-family: "Sans";
+  font-size: 22px;
+  color: black; }
+
+.container_parrafo_productos, .parrafo_productos {
+  font-family: "SansL";
+  font-size: 12px;
+  color: black; }
+
 .h1_index {
   display: none; }
 
@@ -244,7 +275,8 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 0.2fr 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr;
   grid-template-areas: "slide_portada slide_portada slide_portada slide_portada" "h3_index_a h3_index_a h3_index_a h3_index_a" "img_index_a img_index_a parrafo_index_a1 parrafo_index_a1" "img_index_a img_index_a parrafo_index_a2 parrafo_index_a2" "h3_index_b h3_index_b h3_index_b h3_index_b" "img_index_b img_index_b parrafo_index_b1 parrafo_index_b1" "img_index_b img_index_b parrafo_index_b2 parrafo_index_b2";
-  background-color: white; }
+  background-color: white;
+  margin-bottom: 60px; }
 
 .slide_portada {
   grid-area: slide_portada; }
@@ -282,13 +314,21 @@ footer {
 
 /*PROMO BROS*/
 .img_index_a {
-  width: 400px;
-  border-radius: 15px; }
+  width: 380px;
+  border-radius: 15px;
+  transition: 0.3s; }
+
+.img_index_a:hover {
+  width: 430px; }
 
 /*PROMO KING*/
 .img_index_b {
-  width: 400px;
-  border-radius: 15px; }
+  width: 380px;
+  border-radius: 15px;
+  transition: 0.3s; }
+
+.img_index_b:hover {
+  width: 430px; }
 
 /*MEDIAS QUERYS*/
 @media (max-width: 768px) {
@@ -368,30 +408,20 @@ footer {
   margin-left: 0.5%;
   border: 1px solid #c8c8c8; }
 
-.bidones {
-  padding: 2%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
-
-.h3_productos {
-  text-align: start;
+/*BARRAS*/
+h2 {
+  padding-top: 1%;
+  text-align: center;
   font-family: "SansB";
-  font-size: 20px;
+  font-size: 25px;
   color: black; }
 
-.h4_productos {
-  padding: 1% 0% 2.5% 0%;
-  text-align: start;
-  font-family: "Sans";
-  font-size: 22px;
-  color: black; }
+.barras_space {
+  margin-left: 0.5%;
+  border: 1px solid #c8c8c8; }
 
-.parrafo_productos {
-  font-family: "SansL";
-  font-size: 12px;
-  color: black; }
+.barras {
+  padding-bottom: 8%; }
 
 /*MEDIAS QUERYS*/
 @media (max-width: 768px) {
@@ -415,8 +445,7 @@ footer {
   color: white; }
 
 .main_qs {
-  background-image: url("../img/Fondo_Hacha.jpg");
-  background-size: contain; }
+  background-color: black; }
 
 /*PARRAFOS*/
 .parrafo_qs1 {
@@ -443,8 +472,6 @@ footer {
     height: 86px; } }
 
 @media (max-width: 426px) {
-  .main_qs {
-    background-size: cover; }
   .parrafo_qs1 {
     height: 300px; } }
 
@@ -485,7 +512,7 @@ footer {
   .form .ic2 {
     margin-top: 30px; }
   .form .input {
-    background-color: #c8c8c8;
+    background-color: #dfdfdf;
     border-radius: 12px;
     border: 0;
     box-sizing: border-box;
@@ -495,22 +522,37 @@ footer {
     outline: 0;
     padding: 4px 20px 0;
     width: 100%; }
-  .form .submit {
-    background-color: #c8c8c8;
-    font-family: "SansB";
-    border-radius: 12px;
+  .form .button {
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .form .sumbit {
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #b9b9b9;
+    z-index: 0;
     border: 0;
     box-sizing: border-box;
     color: white;
-    cursor: pointer;
-    font-size: 18px;
-    height: 50px;
-    margin-top: 38px;
-    outline: 0;
-    text-align: center;
-    width: 100%; }
-  .form .submit:active {
-    background-color: #8a8a8a; }
+    font-family: "SansB";
+    font-size: 20px;
+    padding: 10px 340px;
+    position: absolute;
+    overflow: hidden; }
+  .form .sumbit:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #8a8a8a;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 1s; }
+  .form .sumbit:hover:before {
+    transform: translateX(0); }
 
 /*MEDIAS QUERYS*/
 @media (max-width: 768px) {
@@ -554,6 +596,7 @@ footer {
   color: black; }
 
 i {
+  color: #c8c8c8;
   font-size: 20px;
   margin-left: 1.5%; }
 
