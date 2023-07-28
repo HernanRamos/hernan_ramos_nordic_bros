@@ -1,40 +1,72 @@
-/*--CONTACTO--*/
-/*FORMULARIO*/
-const base_datos = [
-  {nombre: 'Hernan', telefono: '3517598564'},
-  {nombre: 'Vicki', telefono: '3515550000'},];
-const consulta = { nombre: '', telefono: '' };
-const formulario = document.getElementById("form");
-const mensaje = mensaje => {app.innerHTML = `<h2 class='h2'> YA HIZO SU CONSULTA ANTERIORMENTE, LA RESPONDEREMOS EN LA BREVEDAD ${mensaje}</h2>`};
-   
+/*ARRAY PRODUCTOS*/
+function producto (nombre, color, precio, img){
+    this.nombre = nombre;
+    this.color = color;
+    this.precio = precio; 
+    this.img = img;}
 
-formulario.addEventListener("submit", (e) => {
-     e.preventDefault();
-     const consulta_encontrada = base_datos.find(el => el.nombre === consulta.nombre && el.telefono === consulta.telefono);
+const array_productos = [
+new producto("BIDON BLACK","NEGRO",4500,"../img/1A.png"), 
+new producto("BIDON PURPLE","VIOLETA",4500,"../img/2A.png"),
+new producto("BIDON NEON","AMARILLO",4500,"../img/3A.png"),
+new producto("BIDON PINK","ROSA",4500,"../img/4A.png"),
+new producto("BIDON CAMEL","BEIGE",4500,"../img/5A.png"),
+new producto("BARRAS ENERGETICAS"," ",5000,"../img/Promo_King.png"),];
+
+/*ARRAY CARRITO*/
+let array_carrito = JSON.parse( localStorage.getItem("carrito")) || [];
+
+/*BOTON COMPRAR*/
+const buttons_comprar = document.querySelectorAll(".button_comprar");
+buttons_comprar.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        const producto_index = e.target.getAttribute('data-index');
+        array_carrito.push(array_productos[producto_index]);
+        localStorage.setItem('carrito', JSON.stringify(array_carrito));})})
+
+/*CARRITO*/
+const button_carrito = document.querySelector("#button_carrito")
+function actualizar_carrito(){
+    const carrito_container = document.querySelector("#carrito_container");
+    if(carrito_container !== null){
+        carrito_container.innerHTML = '';
+        array_carrito.forEach((producto) => {
+            const producto_carrito = document.createElement('div');
+            producto_carrito.innerHTML = `<div class="card mb-3 bidones_space" style="max-width: 600px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="${producto.img}" class="img-fluid rounded-start" alt="bidon_black">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title h3_productos">${producto.nombre}</h3>
+                        <h4 class="card-text h4_productos">$${producto.precio}</h4>
+                        <p class="card-text parrafo_productos"><small class="text-body-secondary">Capacidad de 1.6L
+                                con peso con líquido de 1.6KG</small></p>
+                        <p class="card-text parrafo_productos"><small class="text-body-secondary">Banda que evita
+                                pérdida de tapa y Manija
+                                ergonómica </small></p>
+                        <p class="card-text parrafo_productos"><small class="text-body-secondary">Tapa con
+                                tecnología antiderrame</small></p>
+                        <p class="card-text parrafo_productos"><small class="text-body-secondary">Material de
+                                plástico resistente</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>`
+        carrito_container.appendChild(producto_carrito);});}}
+actualizar_carrito();
+
+/*BOTON FINALIZAR COMPRA*/
+const sumbit = document.querySelector("#sumbit");
+if (sumbit){
+    sumbit.addEventListener("click",() => {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'LISTO!',
+            text: 'Tu pedido va en camino',
+            showConfirmButton: false,
+            timer: 1800,})});}
+
      
-     if(consulta_encontrada){
-       mensaje(consulta_encontrada.nombre);
-       localStorage.setItem("autenticacion", JSON.stringify({ name: consulta_encontrada.nombre, isLogin: true }));
-     }else{
-       console.log("Nombre:", consulta.nombre);
-       console.log("Teléfono:", consulta.telefono);
-       
-       const consultas_guardadas = localStorage.getItem("consultas");
-       const consultas_nuevas = consultas_guardadas ? JSON.parse(consultas_guardadas) : [];
-       consultas_nuevas.push({ nombre: consulta.nombre, telefono: consulta.telefono });
-       localStorage.setItem("consultas", JSON.stringify(consultas_nuevas));
-     }
-   });
-   
-const consultas_guardadas = localStorage.getItem("consultas");
-const consultas_nuevas = consultas_guardadas ? JSON.parse(consultas_guardadas) : [];
-console.log("Consultas guardadas:", consultas_nuevas);
-   
-const inputs = document.querySelectorAll("input");
-     
-inputs.forEach((element) => {
-  element.addEventListener("input", (e) => {
-  if (e.target.name === "nombre") { consulta.nombre = e.target.value; }
-  if (e.target.name === "telefono") { consulta.telefono = e.target.value; }
-  if (e.target.name === 'mensaje') { consulta.mensaje = e.target.value; }});});
-   

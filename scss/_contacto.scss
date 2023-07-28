@@ -2,7 +2,7 @@
 .h1_contacto{display: none;}
 
 /*FORMULARIO*/
-.form {
+.form{
   margin: auto;
   margin-top:8%;
   margin-bottom:20%;
@@ -12,80 +12,73 @@
   background-color: $color_principal;
   border-radius: 15px;
   box-sizing: border-box;
-  .title {
-  color: white;
-  font-family: "SansB";
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  margin-top: 8px;}
-  .subtitle {
-  color: white;
-  font-family:"SansB";
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 8px;}
-  .input-container {
-  height: 50px;
-  position: relative;
-  width: 100%;}
-  .ic1 {
-    margin-top: 40px;}
-  .ic2 {
-  margin-top: 30px;}
-  .input {
-  background-color: #dfdfdf;
-  border-radius: 12px;
-  border: 0;
-  box-sizing: border-box;
-  color: black;
-  font-size: 18px;
-  height: 100%;
-  outline: 0;
-  padding: 4px 20px 0;
-  width: 100%;}
-  .button {
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .sumbit {
-    text-decoration: none;
-    border-radius: 15px;
-    background-color: #b9b9b9;
-    z-index: 0;
-    border:0;
-  box-sizing: border-box;
-    color:white;
-    font-family:"SansB";
-    font-size: 20px;
-    
-    padding: 10px 340px;
-    position: absolute;
-     overflow:hidden;
-  }
-
-  .sumbit:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #8a8a8a;
-    z-index: -1;
-    transform: translateX(-100%);
-    transition: all 1s;}
-    .sumbit:hover:before {
-    transform: translateX(0);}
-}
+   .title{
+   color: white;
+   font-family: "SansB";
+   text-align: center;
+   font-size: 30px;
+   font-weight: 600;
+   margin-top: 8px;}
+   .subtitle{
+   color: white;
+   font-family:"SansB";
+   text-align: center;
+   font-size: 16px;
+   font-weight: 600;
+   margin-top: 8px;}
+   .input-container{
+   height: 50px;
+   position: relative;
+   width: 100%;}
+   .ic1{margin-top: 40px;}
+   .ic2{margin-top: 30px;}
+   .input{
+   background-color: #dfdfdf;
+   border-radius: 12px;
+   border: 0;
+   box-sizing: border-box;
+   color: black;
+   font-size: 18px;
+   height: 100%;
+   outline: 0;
+   padding: 4px 20px 0;
+   width: 100%;}
+   .button{
+   height: 110px;
+   display: flex;
+   justify-content: center;
+   align-items: center;}
+   .sumbit{
+   text-decoration: none;
+   border-radius: 15px;
+   background-color: #b9b9b9;
+   z-index: 0;
+   border:0;
+   box-sizing: border-box;
+   color:white;
+   font-family:"SansB";
+   font-size: 20px;
+   padding: 10px 340px;
+   position: absolute;
+   overflow:hidden;}
+   .sumbit:before {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: #8a8a8a;
+   z-index: -1;
+   transform: translateX(-100%);
+   transition: all 1s;}
+   .sumbit:hover:before {
+   transform: translateX(0);}}
 
 
 /*MEDIAS QUERYS*/
 @media (max-width:768px){
      .form{width: 500px;}}
 @media (max-width:426px){
-    .form{width: 350px;
+     .form{width: 350px;
         .input{ font-size: 16px;}}}

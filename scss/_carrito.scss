@@ -1,0 +1,39 @@
+.main_c{min-height: 70vh;}
+.div_c{
+min-height: 55vh;
+padding: 2%;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-content: center;}
+.button{
+height: 110px;
+display: flex;
+justify-content: center;
+align-items: center;}
+.sumbit{
+text-decoration: none;
+border-radius: 15px;
+background-color: #39D48D;
+z-index: 0;
+border:0;
+box-sizing: border-box;
+color:white;
+font-family:"SansB";
+font-size: 20px;
+padding: 10px 186px;
+position: absolute;
+overflow:hidden;}
+.sumbit:before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: black;
+z-index: -1;
+transform: translateX(-100%);
+transition: all 1s;}
+.sumbit:hover:before {
+transform: translateX(0);}

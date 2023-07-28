@@ -45,7 +45,8 @@ header{
             font-family: "ArialBlack";
             font-size: 14.5px;
                 a {text-decoration: none;color: white;
-                    &:hover {color: black;transition: 0.3s;}}}}}      
+                    &:hover {color: black;transition: 0.3s;}}}
+            .carrito{width: 35px;margin:0px 30px 5px 10px;}}}
     .offcanvas-title{
         width: 150px;
         color: black;
@@ -125,7 +126,12 @@ footer {
         align-items: center;}}    
     
  /*---MEDIAS QUERYS---*/
-
+@media (min-width:1440px){
+    .main_1440{padding: 0% 1% 0% 1%;}
+    .h1_1440{font-size: 30px;padding-top: 4%;}
+    .bidones_space{max-width: 650px!important}
+    .bidones_1440{display: flex;justify-content: space-around!important}
+    .h3_productos{font-size: 22px!important}}
 @media (max-width:768px){
 /*HEADER*/
     .header{
@@ -152,7 +158,5 @@ footer {
 footer{
     font-size: 14px;
     ul{li{i{font-size: 20px;margin-right: 5%;}}}
-    .footer{
-        display: flex;
-        flex-wrap: nowrap;}}}
+    .footer{display: flex;flex-wrap: nowrap;}}}
     

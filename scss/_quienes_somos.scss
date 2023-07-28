@@ -1,6 +1,6 @@
 /*MAIN*/
 .h1_qs{color:white}
-.main_qs{background-color:black;}
+.main_qs{background-color:#1B1C1E;}
 
 /*PARRAFOS*/
 .parrafo_qs1{
@@ -8,8 +8,7 @@
     height: 280px;
     font-family:"Sans";
     font-size: 16px;
-    color: white;
-    }
+    color: white;}
 .parrafo_qs2{
     padding:3%;
     margin:0%;
@@ -20,6 +19,9 @@
     color: white;}
 
 /*MEDIAS QUERYS*/
+@media (max-width:1440px){
+    .parrafo_qs1{font-size: 18px;}
+    .parrafo_qs2{font-size: 35px;}}
 @media (max-width:768px){
     .parrafo_qs1{ height: 210px;}
     .parrafo_qs2{ height: 86px;}}

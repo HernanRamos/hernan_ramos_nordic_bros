@@ -48,6 +48,11 @@
 
 
 /*MEDIAS QUERYS*/
+@media (min-width:1440px){
+    .parrafo_index_a1{font-size: 18px;}
+    .parrafo_index_a2{font-size: 35px;}
+    .parrafo_index_b1{font-size: 18px;}
+    .parrafo_index_b2{font-size: 35px;}}
 @media (max-width:768px){
     .grid_area_index{margin-bottom: 8%;}
     .h3_index_a{font-size: 30px}
