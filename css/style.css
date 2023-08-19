@@ -26,6 +26,10 @@
   font-family: "Sans";
   src: url(../fonts/sans/LEMONMILK-Medium.otf); }
 
+@font-face {
+  font-family: "Toxico";
+  src: url(../fonts/toxico/Toxico.otf); }
+
 /*---HEADER---*/
 header {
   width: 100%;
@@ -499,7 +503,7 @@ h2 {
   color: white; }
 
 .main_qs {
-  background-color: #1B1C1E; }
+  background-color: #101010; }
 
 /*PARRAFOS*/
 .parrafo_qs1 {
@@ -681,8 +685,9 @@ i {
 .main_c {
   min-height: 70vh; }
 
+/*BOTON SUMBIT*/
 .div_c {
-  min-height: 55vh;
+  min-height: 15vh;
   padding: 2%;
   display: flex;
   flex-direction: column;
@@ -723,3 +728,32 @@ i {
 
 .sumbit:hover:before {
   transform: translateX(0); }
+
+/*BOTON DELETE*/
+.button_delete {
+  width: 10%;
+  margin: 1.5% 0% 1% 90%;
+  font-family: "Toxico";
+  font-size: 20px;
+  text-align: center;
+  background-color: #c8c8c8;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: black; }
+  .button_delete:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s; }
+
+/*NOTICICACION DATA CARRITO*/
+.toastify {
+  width: 100%;
+  transform: translate(0px, 69.5px) !important;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  font-family: "SansB";
+  font-size: 16px;
+  color: white; }
