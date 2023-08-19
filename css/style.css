@@ -750,7 +750,7 @@ i {
 .toastify {
   width: 100%;
   transform: translate(0px, 69.5px) !important;
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   background-color: black;
